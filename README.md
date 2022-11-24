@@ -16,7 +16,7 @@ Este é um aplicativo de  aprendizado desenvolvido com intuito de replicar a int
 - View Code
 - MVVM
 
-## 🛠 Install
+## 🛠 Instalação
 * `git clone git@github.com:Edgar-AAS/HomeNubankViewCode.git`
 * `pod install`
 
