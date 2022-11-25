@@ -1,5 +1,15 @@
 import UIKit
 
+private enum HomeCellsType: Int {
+    case balanceCell
+    case serviceCell
+    case myCardsCell
+    case announcementsCell
+    case creditCardCell
+    case featureCell
+    case noticiesCell
+}
+
 class HomeViewController: UIViewController, UIScrollViewDelegate {
     private var tableview: UITableView!
     private var refreshControl = UIRefreshControl()
@@ -54,42 +64,39 @@ extension HomeViewController: UITableViewDataSource {
         return 7
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
-        case 0:
+        let homeCells = HomeCellsType(rawValue: indexPath.row)
+        switch homeCells {
+        case .balanceCell:
             guard let accountCell = tableView.dequeueReusableCell(withIdentifier: BalanceTableViewCell.reuseIdentifier, for: indexPath) as? BalanceTableViewCell else {
                 return UITableViewCell()
             }
             accountCell.selectionStyle = .none
             accountCell.accessoryType = .disclosureIndicator
             return accountCell
-        case 1:
+        case .serviceCell:
             guard let servicesCell = tableView.dequeueReusableCell(withIdentifier: ServicesTableViewCell.reuseIdentifier, for: indexPath)  as? ServicesTableViewCell  else {
                 return UITableViewCell() }
             servicesCell.selectionStyle = .none
             return servicesCell
-        case 2:
+        case .myCardsCell:
             guard let myCardsCell = tableView.dequeueReusableCell(withIdentifier: MyCardsTableViewCell.reuseIdentifier, for: indexPath) as? MyCardsTableViewCell else { return UITableViewCell() }
             myCardsCell.selectionStyle = .none
             return myCardsCell
-        case 3:
+        case .announcementsCell:
             guard let announcementsCell = tableView.dequeueReusableCell(withIdentifier: AnnouncementsTableViewCell.reuseIdentifier, for: indexPath) as? AnnouncementsTableViewCell else { return UITableViewCell() }
             announcementsCell.selectionStyle = .none
             return announcementsCell
-        case 4:
+        case .creditCardCell:
             guard let creditCardCell = tableView.dequeueReusableCell(withIdentifier: CreditCardTableViewCell.reuseIdentifier, for: indexPath) as? CreditCardTableViewCell else { return UITableViewCell() }
             creditCardCell.selectionStyle = .none
             creditCardCell.accessoryType = .disclosureIndicator
             return creditCardCell
-        case 5:
+        case .featureCell:
             guard let featureCell = tableView.dequeueReusableCell(withIdentifier: FeatureTableViewCell.reuseIdentifier, for: indexPath) as? FeatureTableViewCell else { return UITableViewCell() }
             featureCell.selectionStyle = .none
             return featureCell
-        case 6:
+        case .noticiesCell:
             guard let noticiesCell = tableView.dequeueReusableCell(withIdentifier: NoticiesTableViewCell.reuseIdentifier, for: indexPath) as? NoticiesTableViewCell else { return UITableViewCell() }
             noticiesCell.selectionStyle = .none
             return noticiesCell
