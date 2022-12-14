@@ -2,7 +2,6 @@ import UIKit
 
 class ServicesTableViewCell: UITableViewCell {
     private var collectionView: UICollectionView!
-    
     static let reuseIdentifier = String(describing: ServicesTableViewCell.self)
     
     private let viewModel = ServiceViewModel()
@@ -41,6 +40,7 @@ extension ServicesTableViewCell: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ServiceCollectionViewCell.resuseIdentifier, for: indexPath) as? ServiceCollectionViewCell else {
             return UICollectionViewCell()
         }
+        
         cell.setupServiceCell(model: viewModel.getCurrentService(indexPath: indexPath))
         return cell
     }
@@ -53,6 +53,12 @@ extension ServicesTableViewCell: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 1
+    }
+}
+
+extension ServicesTableViewCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(viewModel.getCurrentService(indexPath: indexPath))
     }
 }
 

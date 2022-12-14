@@ -12,23 +12,39 @@ class CreditCardTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private lazy var creditCardView: CreditCardCellView = {
-        return CreditCardCellView()
+    private lazy var creditCardView: CreditDebitCardView = {
+        return CreditDebitCardView(
+            cardText: "Cartão de crédito",
+            balanceStatusText: "Saldo positivo",
+            amountText: "R$ 3224,90",
+            limitText: "Limite disponivel de: R$ 4724,90"
+        )
+    }()
+    
+    private lazy var separatorLineView: SeparatorLineView = {
+        return SeparatorLineView()
     }()
 }
 
 extension CreditCardTableViewCell: CodeView {
     func buildViewHierarchy() {
         contentView.addSubview(creditCardView)
+        contentView.addSubview(separatorLineView)
     }
     
     func setupConstrains() {
         creditCardView.translatesAutoresizingMaskIntoConstraints = false
+        separatorLineView.translatesAutoresizingMaskIntoConstraints = false
+        
         NSLayoutConstraint.activate([
             creditCardView.topAnchor.constraint(equalTo: contentView.topAnchor),
             creditCardView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             creditCardView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            creditCardView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            
+            separatorLineView.topAnchor.constraint(equalTo: creditCardView.bottomAnchor),
+            separatorLineView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            separatorLineView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            separatorLineView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
 }

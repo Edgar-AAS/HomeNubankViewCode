@@ -5,6 +5,10 @@ class AnnouncementsTableViewCell: UITableViewCell {
     static let reuseIdentifier = String(describing: AnnouncementsTableViewCell.self)
     private let viewModel = AnnouncementsViewModel()
     
+    private lazy var separatorLineView: SeparatorLineView = {
+        return SeparatorLineView()
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         configCollectionView()
@@ -35,27 +39,34 @@ class AnnouncementsTableViewCell: UITableViewCell {
 extension AnnouncementsTableViewCell: CodeView {
     func buildViewHierarchy() {
         contentView.addSubview(collectionView)
+        contentView.addSubview(separatorLineView)
     }
     
     func setupConstrains() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        separatorLineView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: contentView.topAnchor),
             collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            collectionView.heightAnchor.constraint(equalToConstant: 100)
+            collectionView.heightAnchor.constraint(equalToConstant: 100),
+            
+            separatorLineView.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 15),
+            separatorLineView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            separatorLineView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            separatorLineView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
     
     func setupAdditionalConfiguration() {
-        contentView.backgroundColor = .red
+        collectionView.backgroundColor = .white
+        contentView.backgroundColor = .white
     }
 }
 
 extension AnnouncementsTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: frame.size.width/1.2, height: frame.size.height)
+        return CGSize(width: frame.size.width/1.2, height: collectionView.bounds.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

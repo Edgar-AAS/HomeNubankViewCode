@@ -17,7 +17,7 @@ class ServiceCollectionViewCell: UICollectionViewCell {
     }
     
     func setupServiceCell(model: ServiceModel) {
-        serviceView.serviceImage.image = UIImage(systemName: model.serviceImage)
+        serviceView.serviceImage.image = UIImage(systemName: model.serviceImage) ?? UIImage(systemName: "xmark")
         serviceView.serviceLabelName.text = model.serviceName
     }
 }

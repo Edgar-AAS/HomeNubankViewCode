@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7279CB44293288E500ECD366 /* CreditDebitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279CB43293288E500ECD366 /* CreditDebitCardView.swift */; };
+		72A8AE78294A275600208B49 /* SeparatorLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8AE77294A275600208B49 /* SeparatorLineView.swift */; };
 		72ACAAE3292FFA160040DC50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACAAE2292FFA160040DC50 /* AppDelegate.swift */; };
 		72ACAAE5292FFA160040DC50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACAAE4292FFA160040DC50 /* SceneDelegate.swift */; };
 		72ACAAEC292FFA220040DC50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72ACAAEB292FFA220040DC50 /* Assets.xcassets */; };
@@ -25,7 +27,6 @@
 		72ACAB75292FFDB30040DC50 /* FeatureCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACAB73292FFDB30040DC50 /* FeatureCellView.swift */; };
 		72ACAB76292FFDB30040DC50 /* FeatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACAB74292FFDB30040DC50 /* FeatureTableViewCell.swift */; };
 		72ACAB7B292FFDDD0040DC50 /* CreditCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACAB79292FFDDD0040DC50 /* CreditCardTableViewCell.swift */; };
-		72ACAB7C292FFDDD0040DC50 /* CreditCardCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACAB7A292FFDDD0040DC50 /* CreditCardCellView.swift */; };
 		72ACAB82292FFE070040DC50 /* AnnouncementsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACAB7F292FFE070040DC50 /* AnnouncementsCollectionViewCell.swift */; };
 		72ACAB83292FFE070040DC50 /* AnnouncementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACAB80292FFE070040DC50 /* AnnouncementsTableViewCell.swift */; };
 		72ACAB84292FFE070040DC50 /* AnnouncementsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACAB81292FFE070040DC50 /* AnnouncementsCellView.swift */; };
@@ -45,6 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7279CB43293288E500ECD366 /* CreditDebitCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditDebitCardView.swift; sourceTree = "<group>"; };
+		72A8AE77294A275600208B49 /* SeparatorLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorLineView.swift; sourceTree = "<group>"; };
 		72ACAADF292FFA160040DC50 /* HomeNubankViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeNubankViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72ACAAE2292FFA160040DC50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72ACAAE4292FFA160040DC50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +68,6 @@
 		72ACAB73292FFDB30040DC50 /* FeatureCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureCellView.swift; sourceTree = "<group>"; };
 		72ACAB74292FFDB30040DC50 /* FeatureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureTableViewCell.swift; sourceTree = "<group>"; };
 		72ACAB79292FFDDD0040DC50 /* CreditCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardTableViewCell.swift; sourceTree = "<group>"; };
-		72ACAB7A292FFDDD0040DC50 /* CreditCardCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardCellView.swift; sourceTree = "<group>"; };
 		72ACAB7F292FFE070040DC50 /* AnnouncementsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementsCollectionViewCell.swift; sourceTree = "<group>"; };
 		72ACAB80292FFE070040DC50 /* AnnouncementsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementsTableViewCell.swift; sourceTree = "<group>"; };
 		72ACAB81292FFE070040DC50 /* AnnouncementsCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnouncementsCellView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		722EAEFB2933A62300A2D4BD /* CreditDebitCardView */ = {
+			isa = PBXGroup;
+			children = (
+				7279CB43293288E500ECD366 /* CreditDebitCardView.swift */,
+			);
+			path = CreditDebitCardView;
+			sourceTree = "<group>";
+		};
+		722EAF062933BA8500A2D4BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72ACAB8E292FFE510040DC50 /* ServiceCellView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7279CB412932866E00ECD366 /* HomeViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				72A8AE75294A045800208B49 /* SeparatorLineView */,
+				722EAEFB2933A62300A2D4BD /* CreditDebitCardView */,
+			);
+			path = HomeViewComponents;
+			sourceTree = "<group>";
+		};
+		72A8AE75294A045800208B49 /* SeparatorLineView */ = {
+			isa = PBXGroup;
+			children = (
+				72A8AE77294A275600208B49 /* SeparatorLineView.swift */,
+			);
+			path = SeparatorLineView;
+			sourceTree = "<group>";
+		};
 		72ACAAD6292FFA160040DC50 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +152,7 @@
 				72ACAAE2292FFA160040DC50 /* AppDelegate.swift */,
 				72ACAAE4292FFA160040DC50 /* SceneDelegate.swift */,
 				72ACAB48292FFB3D0040DC50 /* Extensions */,
+				7279CB412932866E00ECD366 /* HomeViewComponents */,
 				72ACAB57292FFCB80040DC50 /* Models */,
 				72ACAAF9292FFAFB0040DC50 /* TabBarController */,
 				72ACAB56292FFCA70040DC50 /* Scenes */,
@@ -228,7 +264,6 @@
 		72ACAB78292FFDC00040DC50 /* CreditCardCell */ = {
 			isa = PBXGroup;
 			children = (
-				72ACAB7A292FFDDD0040DC50 /* CreditCardCellView.swift */,
 				72ACAB79292FFDDD0040DC50 /* CreditCardTableViewCell.swift */,
 			);
 			path = CreditCardCell;
@@ -258,7 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				72ACAB9D2930195F0040DC50 /* ViewModel */,
-				72ACAB8E292FFE510040DC50 /* ServiceCellView.swift */,
+				722EAF062933BA8500A2D4BD /* View */,
 				72ACAB8D292FFE510040DC50 /* ServiceCollectionViewCell.swift */,
 				72ACAB8F292FFE510040DC50 /* ServicesTableViewCell.swift */,
 			);
@@ -376,7 +411,7 @@
 				72ACAAE3292FFA160040DC50 /* AppDelegate.swift in Sources */,
 				72ACAB91292FFE510040DC50 /* ServiceCellView.swift in Sources */,
 				72ACAB6C292FFD7E0040DC50 /* NoticiesCollectionViewCell.swift in Sources */,
-				72ACAB7C292FFDDD0040DC50 /* CreditCardCellView.swift in Sources */,
+				7279CB44293288E500ECD366 /* CreditDebitCardView.swift in Sources */,
 				72ACAB63292FFD360040DC50 /* AssetsViewController.swift in Sources */,
 				72ACAB75292FFDB30040DC50 /* FeatureCellView.swift in Sources */,
 				72ACAB89292FFE300040DC50 /* MyCardsCellView.swift in Sources */,
@@ -395,6 +430,7 @@
 				72ACAB83292FFE070040DC50 /* AnnouncementsTableViewCell.swift in Sources */,
 				72ACABA2293019CF0040DC50 /* ServiceModel.swift in Sources */,
 				72ACAB76292FFDB30040DC50 /* FeatureTableViewCell.swift in Sources */,
+				72A8AE78294A275600208B49 /* SeparatorLineView.swift in Sources */,
 				72ACAB6D292FFD7E0040DC50 /* NoticiesView.swift in Sources */,
 				72ACAB64292FFD360040DC50 /* OffersViewController.swift in Sources */,
 				72ACABA729301B2E0040DC50 /* NoticiesViewModel.swift in Sources */,

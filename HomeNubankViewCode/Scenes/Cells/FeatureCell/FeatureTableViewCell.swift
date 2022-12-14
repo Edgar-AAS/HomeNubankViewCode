@@ -13,23 +13,34 @@ class FeatureTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private var featureView: FeatureCellView = {
+    private lazy var featureView: FeatureCellView = {
         return FeatureCellView()
+    }()
+    
+    private lazy var separatorLineView: SeparatorLineView = {
+        return SeparatorLineView()
     }()
 }
 
 extension FeatureTableViewCell: CodeView {
     func buildViewHierarchy() {
         contentView.addSubview(featureView)
+        contentView.addSubview(separatorLineView)
     }
     
     func setupConstrains() {
         featureView.translatesAutoresizingMaskIntoConstraints = false
+        separatorLineView.translatesAutoresizingMaskIntoConstraints = false
+        
         NSLayoutConstraint.activate([
             featureView.topAnchor.constraint(equalTo: contentView.topAnchor),
             featureView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             featureView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            featureView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            
+            separatorLineView.topAnchor.constraint(equalTo: featureView.bottomAnchor),
+            separatorLineView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            separatorLineView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            separatorLineView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
 }

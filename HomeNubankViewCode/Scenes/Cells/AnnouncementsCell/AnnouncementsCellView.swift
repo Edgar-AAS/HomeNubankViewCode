@@ -23,7 +23,6 @@ class AnnouncementsCellView: UIView {
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 14)
-        label.text = "Vocês pediu e elas chegaram: conheça as caixinhas!"
         label.numberOfLines = 0
         return label
     }()
@@ -41,7 +40,7 @@ extension AnnouncementsCellView: CodeView {
             announcementsView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             announcementsView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             announcementsView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
-        
+            
             announcementsLabel.topAnchor.constraint(equalTo: announcementsView.topAnchor, constant: 20),
             announcementsLabel.leadingAnchor.constraint(equalTo: announcementsView.leadingAnchor, constant: 20),
             announcementsLabel.trailingAnchor.constraint(equalTo: announcementsView.trailingAnchor, constant: -20),

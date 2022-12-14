@@ -1,8 +1,27 @@
 import UIKit
 
-class CreditCardCellView: UIView {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+class CreditDebitCardView: UIView {
+    private var cardText: String
+    private var balanceStatusText: String
+    private var amounText: String
+    private var limitText: String
+    
+    init(cardText: String,
+         balanceStatusText: String,
+         amountText: String,
+         limitText: String)
+    {
+        self.cardText = cardText
+        self.amounText = amountText
+        self.balanceStatusText = balanceStatusText
+        self.limitText = limitText
+        
+        super.init(frame: .zero)
+        
+        amountLabel.text = amounText
+        creditCardNameLabel.text = cardText
+        balanceStatusLabel.text = balanceStatusText
+        avaiableLimitLabel.text = limitText
         setupView()
     }
     
@@ -14,7 +33,6 @@ class CreditCardCellView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
-        label.text = "Cartão de crédito"
         label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
     }()
@@ -23,7 +41,6 @@ class CreditCardCellView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
-        label.text = "Saldo positivo"
         label.textColor = UIColor(hexString: "727583")
         return label
     }()
@@ -32,7 +49,6 @@ class CreditCardCellView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
-        label.text = "R$ 5,00"
         label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
     }()
@@ -41,11 +57,10 @@ class CreditCardCellView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
-        label.text = "Limite disponivel de R$ 1.505,00"
         label.textColor = UIColor(hexString: "727583")
         return label
     }()
-
+    
     lazy var splitPurchasesButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -61,7 +76,7 @@ class CreditCardCellView: UIView {
     
 }
 
-extension CreditCardCellView: CodeView {
+extension CreditDebitCardView: CodeView {
     func buildViewHierarchy() {
         addSubview(creditCardNameLabel)
         addSubview(stackView)
@@ -91,8 +106,7 @@ extension CreditCardCellView: CodeView {
     }
 }
 
-
-extension CreditCardCellView {
+extension CreditDebitCardView {
     func makeVerticalStackView(with views: [UIView]) -> UIStackView {
         let stackView = UIStackView(arrangedSubviews: views)
         stackView.translatesAutoresizingMaskIntoConstraints = false

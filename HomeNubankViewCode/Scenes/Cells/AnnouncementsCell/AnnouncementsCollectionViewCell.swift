@@ -6,7 +6,7 @@ class AnnouncementsCollectionViewCell: UICollectionViewCell {
     lazy var annoucementsView: AnnouncementsCellView = {
         return AnnouncementsCellView()
     }()
-    
+  
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
