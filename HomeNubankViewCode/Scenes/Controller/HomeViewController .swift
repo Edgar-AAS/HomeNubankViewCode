@@ -13,7 +13,7 @@ private enum HomeCellsType: Int {
 class HomeViewController: UIViewController, UIScrollViewDelegate {
     private var tableview: UITableView!
     private var refreshControl = UIRefreshControl()
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -68,31 +68,30 @@ extension HomeViewController: UITableViewDataSource {
         let homeCells = HomeCellsType(rawValue: indexPath.row)
         switch homeCells {
         case .balanceCell:
-            guard let accountCell = tableView.dequeueReusableCell(withIdentifier: BalanceTableViewCell.reuseIdentifier, for: indexPath) as? BalanceTableViewCell else {
-                return UITableViewCell()
-            }
-            accountCell.accessoryType = .disclosureIndicator
-            return accountCell
+            let balanceCell = tableView.dequeueReusableCell(withIdentifier: BalanceTableViewCell.reuseIdentifier, for: indexPath) as? BalanceTableViewCell
+            let viewModel = BalanceCellViewModel()
+            balanceCell?.setupBalanceCell(viewModel: viewModel)
+            balanceCell?.accessoryType = .disclosureIndicator
+            return balanceCell ?? UITableViewCell()
         case .serviceCell:
-            guard let servicesCell = tableView.dequeueReusableCell(withIdentifier: ServicesTableViewCell.reuseIdentifier, for: indexPath)  as? ServicesTableViewCell  else {
-                return UITableViewCell() }
-            return servicesCell
+            let servicesCell = tableView.dequeueReusableCell(withIdentifier: ServicesTableViewCell.reuseIdentifier, for: indexPath)  as? ServicesTableViewCell
+            return servicesCell ?? UITableViewCell()
         case .myCardsCell:
-            guard let myCardsCell = tableView.dequeueReusableCell(withIdentifier: MyCardsTableViewCell.reuseIdentifier, for: indexPath) as? MyCardsTableViewCell else { return UITableViewCell() }
-            return myCardsCell
+            let myCardsCell = tableView.dequeueReusableCell(withIdentifier: MyCardsTableViewCell.reuseIdentifier, for: indexPath) as? MyCardsTableViewCell
+            return myCardsCell ?? UITableViewCell()
         case .announcementsCell:
-            guard let announcementsCell = tableView.dequeueReusableCell(withIdentifier: AnnouncementsTableViewCell.reuseIdentifier, for: indexPath) as? AnnouncementsTableViewCell else { return UITableViewCell() }
-            return announcementsCell
+            let announcementsCell = tableView.dequeueReusableCell(withIdentifier: AnnouncementsTableViewCell.reuseIdentifier, for: indexPath) as? AnnouncementsTableViewCell
+            return announcementsCell ?? UITableViewCell()
         case .creditCardCell:
-            guard let creditCardCell = tableView.dequeueReusableCell(withIdentifier: CreditCardTableViewCell.reuseIdentifier, for: indexPath) as? CreditCardTableViewCell else { return UITableViewCell() }
-            creditCardCell.accessoryType = .disclosureIndicator
-            return creditCardCell
+            let creditCardCell = tableView.dequeueReusableCell(withIdentifier: CreditCardTableViewCell.reuseIdentifier, for: indexPath) as? CreditCardTableViewCell
+            creditCardCell?.accessoryType = .disclosureIndicator
+            return creditCardCell ?? UITableViewCell()
         case .featureCell:
-            guard let featureCell = tableView.dequeueReusableCell(withIdentifier: FeatureTableViewCell.reuseIdentifier, for: indexPath) as? FeatureTableViewCell else { return UITableViewCell() }
-            return featureCell
+            let featureCell = tableView.dequeueReusableCell(withIdentifier: FeatureTableViewCell.reuseIdentifier, for: indexPath) as? FeatureTableViewCell
+            return featureCell ?? UITableViewCell()
         case .noticiesCell:
-            guard let noticiesCell = tableView.dequeueReusableCell(withIdentifier: NoticiesTableViewCell.reuseIdentifier, for: indexPath) as? NoticiesTableViewCell else { return UITableViewCell() }
-            return noticiesCell
+            let noticiesCell = tableView.dequeueReusableCell(withIdentifier: NoticiesTableViewCell.reuseIdentifier, for: indexPath) as? NoticiesTableViewCell
+            return noticiesCell ?? UITableViewCell()
         default:
             return UITableViewCell()
         }
@@ -104,5 +103,5 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return tableView.estimatedRowHeight
     }
-        
+    
 }

@@ -125,14 +125,14 @@ extension HomeTableViewHeader: CodeView {
             stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 20),
             stackView.leadingAnchor.constraint(greaterThanOrEqualTo: profileButton.trailingAnchor, constant: 20),
             stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
-
+            
             userNameLabel.topAnchor.constraint(equalTo: profileButton.bottomAnchor, constant: 40),
             userNameLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20),
             userNameLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -20),
             userNameLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -20)
         ])
     }
-        
+    
     public func scrollViewDidScroll(scrollView: UIScrollView) {
         containerViewHeight.constant = scrollView.contentInset.top
         let offsetY = -(scrollView.contentOffset.y + scrollView.contentInset.top)

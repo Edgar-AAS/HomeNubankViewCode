@@ -25,7 +25,6 @@ class BalanceCellView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
         label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.text = "R$ 25000,00"
         label.textColor = .black
         return label
     }()

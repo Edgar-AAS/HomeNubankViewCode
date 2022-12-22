@@ -16,6 +16,11 @@ class BalanceTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func setupBalanceCell(viewModel: BalanceCellViewModel?) {
+        guard let viewModel = viewModel else { return }
+        balanceView.amountlabel.text = viewModel.getFormattedBalance()
+    }
 }
 
 extension BalanceTableViewCell: CodeView {

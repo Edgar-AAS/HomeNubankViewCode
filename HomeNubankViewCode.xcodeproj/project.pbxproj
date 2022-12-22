@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7279CB44293288E500ECD366 /* CreditDebitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7279CB43293288E500ECD366 /* CreditDebitCardView.swift */; };
+		728D3CFE2954A44A00B21D7A /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728D3CFD2954A44A00B21D7A /* Formatter.swift */; };
+		728D3D022954B93F00B21D7A /* BalanceCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728D3D012954B93F00B21D7A /* BalanceCellViewModel.swift */; };
+		728D3D052954DD6200B21D7A /* CreditCardCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728D3D042954DD6200B21D7A /* CreditCardCellViewModel.swift */; };
 		72A8AE78294A275600208B49 /* SeparatorLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A8AE77294A275600208B49 /* SeparatorLineView.swift */; };
 		72ACAAE3292FFA160040DC50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACAAE2292FFA160040DC50 /* AppDelegate.swift */; };
 		72ACAAE5292FFA160040DC50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ACAAE4292FFA160040DC50 /* SceneDelegate.swift */; };
@@ -47,6 +50,9 @@
 
 /* Begin PBXFileReference section */
 		7279CB43293288E500ECD366 /* CreditDebitCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditDebitCardView.swift; sourceTree = "<group>"; };
+		728D3CFD2954A44A00B21D7A /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		728D3D012954B93F00B21D7A /* BalanceCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCellViewModel.swift; sourceTree = "<group>"; };
+		728D3D042954DD6200B21D7A /* CreditCardCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardCellViewModel.swift; sourceTree = "<group>"; };
 		72A8AE77294A275600208B49 /* SeparatorLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorLineView.swift; sourceTree = "<group>"; };
 		72ACAADF292FFA160040DC50 /* HomeNubankViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeNubankViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72ACAAE2292FFA160040DC50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +128,22 @@
 			path = HomeViewComponents;
 			sourceTree = "<group>";
 		};
+		728D3CF42954A31D00B21D7A /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				728D3CFD2954A44A00B21D7A /* Formatter.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		728D3D002954B92B00B21D7A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				728D3D012954B93F00B21D7A /* BalanceCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		72A8AE75294A045800208B49 /* SeparatorLineView */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +173,7 @@
 			children = (
 				72ACAAE2292FFA160040DC50 /* AppDelegate.swift */,
 				72ACAAE4292FFA160040DC50 /* SceneDelegate.swift */,
+				728D3CF42954A31D00B21D7A /* Commons */,
 				72ACAB48292FFB3D0040DC50 /* Extensions */,
 				7279CB412932866E00ECD366 /* HomeViewComponents */,
 				72ACAB57292FFCB80040DC50 /* Models */,
@@ -265,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				72ACAB79292FFDDD0040DC50 /* CreditCardTableViewCell.swift */,
+				728D3D042954DD6200B21D7A /* CreditCardCellViewModel.swift */,
 			);
 			path = CreditCardCell;
 			sourceTree = "<group>";
@@ -303,6 +327,7 @@
 		72ACAB94292FFE660040DC50 /* BalanceCell */ = {
 			isa = PBXGroup;
 			children = (
+				728D3D002954B92B00B21D7A /* ViewModel */,
 				72ACAB95292FFE8A0040DC50 /* BalanceCellView.swift */,
 				72ACAB96292FFE8A0040DC50 /* BalanceTableViewCell.swift */,
 			);
@@ -419,16 +444,19 @@
 				72ACAB92292FFE510040DC50 /* ServicesTableViewCell.swift in Sources */,
 				72ACAB90292FFE510040DC50 /* ServiceCollectionViewCell.swift in Sources */,
 				72ACAB8A292FFE300040DC50 /* MyCardsTableViewCell.swift in Sources */,
+				728D3CFE2954A44A00B21D7A /* Formatter.swift in Sources */,
 				72ACAB4E292FFB3D0040DC50 /* CodeView.swift in Sources */,
 				72ACAB82292FFE070040DC50 /* AnnouncementsCollectionViewCell.swift in Sources */,
 				72ACAB5E292FFD0D0040DC50 /* HomeTableViewHeader.swift in Sources */,
 				72ACAB84292FFE070040DC50 /* AnnouncementsCellView.swift in Sources */,
 				72ACAB5F292FFD0D0040DC50 /* HomeViewController .swift in Sources */,
+				728D3D022954B93F00B21D7A /* BalanceCellViewModel.swift in Sources */,
 				72ACAB59292FFCE40040DC50 /* ServiceCellModel.swift in Sources */,
 				72ACAB4D292FFB3D0040DC50 /* UIColor.swift in Sources */,
 				72ACAAE5292FFA160040DC50 /* SceneDelegate.swift in Sources */,
 				72ACAB83292FFE070040DC50 /* AnnouncementsTableViewCell.swift in Sources */,
 				72ACABA2293019CF0040DC50 /* ServiceModel.swift in Sources */,
+				728D3D052954DD6200B21D7A /* CreditCardCellViewModel.swift in Sources */,
 				72ACAB76292FFDB30040DC50 /* FeatureTableViewCell.swift in Sources */,
 				72A8AE78294A275600208B49 /* SeparatorLineView.swift in Sources */,
 				72ACAB6D292FFD7E0040DC50 /* NoticiesView.swift in Sources */,

@@ -2,6 +2,7 @@ import UIKit
 
 class CreditCardTableViewCell: UITableViewCell {
     static let reuseIdentifier = String(describing: CreditCardTableViewCell.self)
+    private let viewModel = CreditCardCellViewModel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -16,11 +17,11 @@ class CreditCardTableViewCell: UITableViewCell {
         return CreditDebitCardView(
             cardText: "Cartão de crédito",
             balanceStatusText: "Saldo positivo",
-            amountText: "R$ 3224,90",
-            limitText: "Limite disponivel de: R$ 4724,90"
+            amountText: viewModel.getAmountText,
+            limitText: "Limite disponivel de: \(viewModel.getLimitAmountText)"
         )
     }()
-    
+
     private lazy var separatorLineView: SeparatorLineView = {
         return SeparatorLineView()
     }()
