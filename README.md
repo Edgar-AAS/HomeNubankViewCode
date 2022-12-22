@@ -5,11 +5,12 @@
 
 # Sobre o projeto
 
-Este é um aplicativo de  aprendizado desenvolvido com intuito de replicar a interface principal do app do Nubank de forma programática.
+Este é um aplicativo de aprendizado desenvolvido com intuito de replicar a interface principal do app do Nubank de forma programática.
 
 ## Layout mobile
 
-![NubankGIF_AdobeExpress](https://user-images.githubusercontent.com/103855076/203873793-dd1c6caa-ddff-45ac-b51c-86e6ba8143b1.gif)
+https://user-images.githubusercontent.com/103855076/209237306-07d71df3-689e-43b1-9b02-49320d5fa6d5.mov
+
 
 # Tecnologias utilizadas
 - Swift 5
