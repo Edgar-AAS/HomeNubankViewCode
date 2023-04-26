@@ -20,7 +20,6 @@ https://user-images.githubusercontent.com/103855076/209237306-07d71df3-689e-43b1
 ## 🛠 Instalação
 * `git clone git@github.com:Edgar-AAS/HomeNubankViewCode.git`
 
-## 👨🏻‍💻 Developer
+## 💻 Developer
 * Edgar Arlindo
-    * [Github](https://github.com/Edgar-AAS)
     * [LinkedIn](https://www.linkedin.com/in/edgar-arlindo-394242247/)
