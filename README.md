@@ -9,7 +9,10 @@ Este é um aplicativo de aprendizado desenvolvido com intuito de replicar a inte
 
 ## Layout mobile
 
-https://user-images.githubusercontent.com/103855076/209237306-07d71df3-689e-43b1-9b02-49320d5fa6d5.mov
+<p float="left">
+<img src="https://github.com/Edgar-AAS/HomeNubankViewCode/assets/103855076/abf4f278-125e-456d-a7e3-02a800a87855.png" width="200"/>
+<img src="https://github.com/Edgar-AAS/HomeNubankViewCode/assets/103855076/4a1f2c41-024c-4c92-afb1-b24c2b50a5f5.png" width="200"/>
+</p>
 
 
 # Tecnologias utilizadas
